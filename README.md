@@ -31,7 +31,7 @@ To apply the Yolo face mask detector, download codes [here](https://drive.google
 ```
 ./darknet detector test cfg/mask.data cfg/yolov3.cfg yolov3Mask.weights [image src]
 ```
-If you want to re-train the model, follow the instructions on the Yolo website to donwload the pre-trained weights, then download the image dataset [here](https://drive.google.com/file/d/1QspxOJMDf_rAWVV7AU_Nc0rjo1_EPEDW/view), generate label files and modify the config files cfg/mask.data, cfg/yoloV3.cfg, data/mask.name. Then run the following commmand.
+If you want to re-train the model, follow the instructions on the Yolo website to donwload the pre-trained weights, then download the image dataset [here](https://drive.google.com/file/d/1QspxOJMDf_rAWVV7AU_Nc0rjo1_EPEDW/view), generate label files and modify the config files cfg/mask.data, cfg/yolov3.cfg, data/mask.name. Then run the following commmand.
 ```
 ./darknet detector train cfg/mask.data cfg/yolov3.cfg [pre-trained weights]
 ```
