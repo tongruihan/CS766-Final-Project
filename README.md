@@ -27,11 +27,11 @@ python video_detector.py # If you need to perform detection on a camera livestre
 ## YOLO
 We trained a face mask detector based on the convolutional weights that are pre-trained on Imagenet provided by Yolo. (https://pjreddie.com/darknet/yolo/)
 
-To apply the Yolo face mask detector, download files [here](https://drive.google.com/file/d/1hiyMlHLiKMsIoHI7jAlCgpOa7eYFYoAh/view?usp=sharing), simply get into the darknet folder and run the following command by replacing with the image you want to analyze.
+To apply the Yolo face mask detector, download codes [here](https://drive.google.com/file/d/1hiyMlHLiKMsIoHI7jAlCgpOa7eYFYoAh/view?usp=sharing), simply get into the darknet folder and run the following command by replacing with the image you want to analyze.
 ```
 ./darknet detector test cfg/mask.data cfg/yolov3.cfg yolov3Mask.weights [image src]
 ```
-If you want to re-train the model, follow the instructions on the Yolo website to donwload the pre-trained weights, then download the image dataset, generate label files and modify the config files cfg/mask.data, cfg/yoloV3.cfg, data/mask.name. Then run the following commmand.
+If you want to re-train the model, follow the instructions on the Yolo website to donwload the pre-trained weights, then download the image dataset [here](https://github.com/AIZOOTech/FaceMaskDetection), generate label files and modify the config files cfg/mask.data, cfg/yoloV3.cfg, data/mask.name. Then run the following commmand.
 ```
 ./darknet detector train cfg/mask.data cfg/yolov3.cfg [pre-trained weights]
 ```
