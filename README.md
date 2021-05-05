@@ -25,6 +25,25 @@ python video_detector.py # If you need to perform detection on a camera livestre
 ```
 
 ## YOLO
+We trained a face mask detector based on the convolutional weights that are pre-trained on Imagenet provided by Yolo. (https://pjreddie.com/darknet/yolo/)
+
+To apply the Yolo face mask detector, download files [here](https://drive.google.com/file/d/1hiyMlHLiKMsIoHI7jAlCgpOa7eYFYoAh/view?usp=sharing), simply get into the darknet folder and run the following command by replacing with the image you want to analyze.
+```
+./darknet detector test cfg/mask.data cfg/yolov3.cfg yolov3Mask.weights [image src]
+```
+If you want to re-train the model, follow the instructions on the Yolo website to donwload the pre-trained weights, then download the image dataset, generate label files and modify the config files cfg/mask.data, cfg/yoloV3.cfg, data/mask.name. Then run the following commmand.
+```
+./darknet detector train cfg/mask.data cfg/yolov3.cfg [pre-trained weights]
+```
+* TrainResults.txt.zip - It contains the results of the 5000 batches' training process that we occured to get current yolov3Mask.weights. 
+
+* valResults.zip - It contains the predicted results for each of the image inside the val dataset in the json files (we modified the classes' names for final display of the image which makes the classes' names inside different from what is displayed in the image but the predicted class type is the same). 
+
+* plot.ipynb - It provides the approach to analyze the two kinds of data files provided before, you may need to also download the dataset to use them.
+
+* darknetMask.py - It provides code that can help you analyze a list of images together. You need to put it under the darknet folder and modify the image paths.
+
+* DataGeneration.ipynb - It provides codes for you to generate the files and labels needed to train the Yolo model by converting the annotations provided by the dataset.
 
 ## AUROC Optimization
 Under the folder of AUROC, we developed the codes for model training in PyTorch. 
