@@ -25,7 +25,7 @@ python video_detector.py # If you need to perform detection on a camera livestre
 ```
 
 ## YOLO
-We trained a face mask detector based on the convolutional weights that are pre-trained on Imagenet provided by Yolo. (https://pjreddie.com/darknet/yolo/)
+We trained a face mask detector based on the convolutional weights that are pre-trained on Imagenet provided by [Yolo](https://pjreddie.com/darknet/yolo/). 
 
 To apply the Yolo face mask detector, download codes [here](https://drive.google.com/file/d/1hiyMlHLiKMsIoHI7jAlCgpOa7eYFYoAh/view?usp=sharing), simply get into the darknet folder and run the following command by replacing with the image you want to analyze.
 ```
